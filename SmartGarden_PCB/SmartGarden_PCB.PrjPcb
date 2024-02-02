@@ -217,7 +217,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=IARDZSOA
 
 [Document11]
 DocumentPath=..\..\CommonFiles\Altium_Libraries_e-Tech_Racing\PCB\Electromechanical.PcbLib
@@ -438,7 +438,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=EQHKUOHJ
 
 [Document24]
 DocumentPath=..\CommonFiles\CommonFiles_Library.SchLib
@@ -455,7 +455,39 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=RKZVQOGO
+
+[Parameter1]
+Name=Version
+Value=1.0
+
+[Parameter2]
+Name=ReviewerName
+Value=Berta Feliu
+
+[Parameter3]
+Name=Project
+Value=SmartGarden_PCB
+
+[Parameter4]
+Name=DesignerName
+Value=Bernat Costa Cesari
+
+[Parameter5]
+Name=DesignerMail
+Value=
+
+[Parameter6]
+Name=DesignedByURL
+Value=
+
+[Parameter7]
+Name=Department
+Value=Hardware
+
+[Parameter8]
+Name=Company
+Value=SmartGarden
 
 [DiffPairSuffix1]
 Positive=_H
