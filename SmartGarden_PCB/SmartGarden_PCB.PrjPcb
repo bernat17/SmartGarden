@@ -81,7 +81,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=PYBCDOVK
+DocumentUniqueId=URDCACOB
 
 [Document3]
 DocumentPath=..\..\CommonFiles\Altium_Libraries_e-Tech_Racing\Schematics\Electromechanical.SchLib
@@ -457,37 +457,41 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RKZVQOGO
 
+[GeneratedDocument1]
+DocumentPath=Project Outputs for SmartGarden_PCB\Design Rule Check - SmartGarden_PCB.html
+DItemRevisionGUID=
+
 [Parameter1]
-Name=Version
-Value=1.0
+Name=Company
+Value=SmartGarden
 
 [Parameter2]
-Name=ReviewerName
-Value=Berta Feliu
-
-[Parameter3]
-Name=Project
-Value=SmartGarden_PCB
-
-[Parameter4]
-Name=DesignerName
-Value=Bernat Costa Cesari
-
-[Parameter5]
-Name=DesignerMail
-Value=
-
-[Parameter6]
-Name=DesignedByURL
-Value=
-
-[Parameter7]
 Name=Department
 Value=Hardware
 
+[Parameter3]
+Name=DesignedByURL
+Value=
+
+[Parameter4]
+Name=DesignerMail
+Value=
+
+[Parameter5]
+Name=DesignerName
+Value=Bernat Costa Cesari
+
+[Parameter6]
+Name=Project
+Value=SmartGarden_PCB
+
+[Parameter7]
+Name=ReviewerName
+Value=Berta Feliu
+
 [Parameter8]
-Name=Company
-Value=SmartGarden
+Name=Version
+Value=1.0
 
 [DiffPairSuffix1]
 Positive=_H
