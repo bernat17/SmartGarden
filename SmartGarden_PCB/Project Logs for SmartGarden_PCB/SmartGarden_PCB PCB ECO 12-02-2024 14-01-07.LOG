@@ -1,0 +1,21 @@
+Added Component: Designator=*(Dual socket header 8 pins)
+Added Pin To Net: NetName=GND Pin=*-1
+Added Pin To Net: NetName=+3.3 Pin=*-4
+Added Pin To Net: NetName=+3.3 Pin=*-8
+Added Pin To Net: NetName=Net*_2 Pin=*-2
+Added Pin To Net: NetName=Net*_2 Pin=U201-34
+Added Net: Name=Net*_2
+Added Pin To Net: NetName=Net*_3 Pin=*-3
+Added Pin To Net: NetName=Net*_3 Pin=U201-63
+Added Net: Name=Net*_3
+Added Pin To Net: NetName=Net*_5 Pin=*-5
+Added Pin To Net: NetName=Net*_5 Pin=U201-62
+Added Net: Name=Net*_5
+Added Pin To Net: NetName=Net*_6 Pin=*-6
+Added Pin To Net: NetName=Net*_6 Pin=R418-2
+Added Pin To Net: NetName=Net*_6 Pin=U201-64
+Added Net: Name=Net*_6
+Added Pin To Net: NetName=Net*_7 Pin=*-7
+Added Pin To Net: NetName=Net*_7 Pin=U201-33
+Added Net: Name=Net*_7
+Added Member To Class: ClassName=[4]Actuators Member=Component * ESP01_WiFiModule
