@@ -1,0 +1,9 @@
+Change Component Footprint: Designator=R309 Old Footprint=HR_Sensor New Footprint=EXTERNAL_SENSOR
+Added Component: Designator=R303(HR_Sensor)
+Added Component: Designator=R311(EXTERNAL_SENSOR)
+Added Pin To Net: NetName=+3.3 Pin=R303-1
+Added Pin To Net: NetName=HR_Vout Pin=R303-2
+Added Pin To Net: NetName=+3.3 Pin=R311-1
+Added Pin To Net: NetName=GH_Vout Pin=R311-2
+Added Member To Class: ClassName=[3]Sensors Member=Component R303 HR Sensor
+Added Member To Class: ClassName=[3]Sensors Member=Component R311 GH Sensor
