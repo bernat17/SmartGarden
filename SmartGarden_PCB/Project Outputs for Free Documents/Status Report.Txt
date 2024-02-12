@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [SmartGarden_PCB.PcbDoc]
+   Generated File[SmartGarden_PCB.TXT]
+   Generated File[SmartGarden_PCB-RectHoles.TXT]
+   Generated File[SmartGarden_PCB.LDP]
+   Generated File[SmartGarden_PCB.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 21:34:30 On 12/02/2024
