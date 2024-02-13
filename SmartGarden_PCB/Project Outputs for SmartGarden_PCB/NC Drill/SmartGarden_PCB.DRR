@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: SmartGarden_PCB.PcbDoc   12/02/2024  21:34:29
+NCDrill File Report For: SmartGarden_PCB.PcbDoc   13/02/2024  13:22:58
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
@@ -8,7 +8,7 @@ ASCII RectHoles File : SmartGarden_PCB-RectHoles.TXT
 
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------
-T1      0.5mm (20mil)                                             Round             294       PTH        1405.30mm (55.33inch)
+T1      0.5mm (20mil)                                             Round             275       PTH        1348.07mm (53.07inch)
 T2      0.714mm (28mil)                                           Round             9         PTH        55.55mm (2.19inch)
 T3      0.8mm (31mil)                                             Rectangle         3         PTH        28.82mm (1.13inch)
 T4      0.9mm (35mil)                                             Round             6         PTH        108.12mm (4.26inch)
@@ -18,6 +18,6 @@ T7      1.1mm (43mil)                                             Round         
 T8      1.2mm (47mil)                                             Round             2         PTH        2.54mm (0.10inch)
 T9      3.2mm (126mil)                                            Round             4         PTH        240.00mm (9.45inch)
 ----------------------------------------------------------------------------------------------------------------------------------
-Totals                                                                              358
+Totals                                                                              339
 
 Total Processing Time (hh:mm:ss) : 00:00:00
