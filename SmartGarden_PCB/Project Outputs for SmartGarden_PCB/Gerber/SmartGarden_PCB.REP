@@ -24,6 +24,9 @@ Generating : Bottom Paste
 
 
 Used DCodes :
+    D29
+    D30
+    D39
     D103
 *************************************************************
 
@@ -78,6 +81,9 @@ Generating : Bottom Solder
 
 
 Used DCodes :
+    D54
+    D55
+    D64
     D68
     D69
     D70
@@ -95,146 +101,6 @@ Used DCodes :
     D82
     D83
     D104
-*************************************************************
-
-*************************************************************
-Generating : Top Layer
-      File : SmartGarden_PCB.GTL
-
-    Adding Layer      : Top Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D16
-    D17
-    D19
-    D20
-    D21
-    D22
-    D23
-    D24
-    D25
-    D26
-    D27
-    D28
-    D29
-    D30
-    D31
-    D32
-    D33
-    D34
-    D35
-    D36
-    D37
-    D38
-    D39
-    D40
-    D41
-    D42
-    D84
-    D85
-    D86
-    D87
-    D88
-    D89
-    D90
-    D91
-    D92
-    D93
-    D94
-    D95
-    D96
-    D97
-    D98
-    D99
-    D100
-    D101
-    D102
-*************************************************************
-
-*************************************************************
-Generating : Bottom Layer
-      File : SmartGarden_PCB.GBL
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D17
-    D85
-    D87
-    D88
-    D89
-    D90
-    D91
-    D92
-    D93
-    D94
-    D95
-    D96
-    D97
-    D98
-    D99
-    D100
-    D101
-    D102
-    D103
-*************************************************************
-
-*************************************************************
-Generating : GND
-      File : SmartGarden_PCB.G1
-
-    Adding Layer      : GND
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D87
-    D88
-    D89
-    D90
-    D92
-    D93
-    D94
-    D95
-    D97
-    D98
-    D99
-    D100
-    D101
-    D102
-*************************************************************
-
-*************************************************************
-Generating : PWR
-      File : SmartGarden_PCB.G2
-
-    Adding Layer      : PWR
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D87
-    D88
-    D89
-    D90
-    D92
-    D93
-    D94
-    D95
-    D97
-    D98
-    D99
-    D100
-    D101
-    D102
 *************************************************************
 
 *************************************************************
@@ -300,6 +166,8 @@ Generating : Bottom Overlay
 
 
 Used DCodes :
+    D10
+    D12
 *************************************************************
 
 *************************************************************
@@ -318,6 +186,149 @@ Used DCodes :
     D15
     D16
     D17
+*************************************************************
+
+*************************************************************
+Generating : PWR
+      File : SmartGarden_PCB.G2
+
+    Adding Layer      : PWR
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D88
+    D89
+    D90
+    D91
+    D92
+    D93
+    D94
+    D95
+    D97
+    D98
+    D99
+    D100
+    D101
+    D102
+*************************************************************
+
+*************************************************************
+Generating : GND
+      File : SmartGarden_PCB.G1
+
+    Adding Layer      : GND
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D88
+    D89
+    D90
+    D91
+    D92
+    D93
+    D94
+    D95
+    D97
+    D98
+    D99
+    D100
+    D101
+    D102
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : SmartGarden_PCB.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D17
+    D29
+    D30
+    D39
+    D85
+    D87
+    D88
+    D89
+    D90
+    D91
+    D92
+    D93
+    D94
+    D95
+    D96
+    D97
+    D98
+    D99
+    D100
+    D101
+    D102
+    D103
+*************************************************************
+
+*************************************************************
+Generating : Top Layer
+      File : SmartGarden_PCB.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D16
+    D17
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D84
+    D85
+    D86
+    D87
+    D88
+    D89
+    D90
+    D91
+    D92
+    D93
+    D94
+    D95
+    D96
+    D97
+    D98
+    D99
+    D100
+    D101
+    D102
 *************************************************************
 
 *************************************************************
