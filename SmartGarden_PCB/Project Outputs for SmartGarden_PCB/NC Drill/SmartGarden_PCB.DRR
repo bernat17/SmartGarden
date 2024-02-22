@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: SmartGarden_PCB.PcbDoc   16/02/2024  22:34:48
+NCDrill File Report For: SmartGarden_PCB.PcbDoc   22/02/2024  18:03:20
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
@@ -8,7 +8,7 @@ ASCII RectHoles File : SmartGarden_PCB-RectHoles.TXT
 
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------
-T1      0.5mm (20mil)                                             Round             282       PTH        1406.08mm (55.36inch)
+T1      0.5mm (20mil)                                             Round             282       PTH        1406.87mm (55.39inch)
 T2      0.714mm (28mil)                                           Round             9         PTH        30.89mm (1.22inch)
 T3      0.8mm (31mil)                                             Rectangle         3         PTH        28.82mm (1.13inch)
 T4      0.9mm (35mil)                                             Round             6         PTH        108.12mm (4.26inch)
@@ -20,4 +20,4 @@ T9      3.2mm (126mil)                                            Round         
 ----------------------------------------------------------------------------------------------------------------------------------
 Totals                                                                              346
 
-Total Processing Time (hh:mm:ss) : 00:00:00
+Total Processing Time (hh:mm:ss) : 00:00:01

@@ -24,7 +24,6 @@ Generating : Bottom Paste
 
 
 Used DCodes :
-    D29
     D30
     D39
     D103
@@ -81,7 +80,6 @@ Generating : Bottom Solder
 
 
 Used DCodes :
-    D54
     D55
     D64
     D68
@@ -189,6 +187,39 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
+Generating : Bottom Layer
+      File : SmartGarden_PCB.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D17
+    D30
+    D39
+    D85
+    D87
+    D88
+    D89
+    D90
+    D91
+    D92
+    D93
+    D94
+    D95
+    D96
+    D97
+    D98
+    D99
+    D100
+    D101
+    D102
+    D103
+*************************************************************
+
+*************************************************************
 Generating : PWR
       File : SmartGarden_PCB.G2
 
@@ -238,40 +269,6 @@ Used DCodes :
     D100
     D101
     D102
-*************************************************************
-
-*************************************************************
-Generating : Bottom Layer
-      File : SmartGarden_PCB.GBL
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D17
-    D29
-    D30
-    D39
-    D85
-    D87
-    D88
-    D89
-    D90
-    D91
-    D92
-    D93
-    D94
-    D95
-    D96
-    D97
-    D98
-    D99
-    D100
-    D101
-    D102
-    D103
 *************************************************************
 
 *************************************************************

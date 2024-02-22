@@ -1,0 +1,23 @@
+Removed Pin From Net: NetName=DPS_SDA Pin=Q405-B
+Removed Pin From Net: NetName=GND Pin=Q405-E
+Removed Pin From Net: NetName=GND Pin=Q406-S
+Removed Pin From Net: NetName=DPS_SCL Pin=Q407-B
+Removed Pin From Net: NetName=GND Pin=Q407-E
+Removed Pin From Net: NetName=GND Pin=Q408-S
+Removed Pin From Net: NetName=+5 Pin=R419-1
+Removed Pin From Net: NetName=+5 Pin=R421-1
+Removed Member From Class: ClassName=[4]Actuators Member=Q407
+Removed Member From Class: ClassName=[4]Actuators Member=Q408
+Change Component Designator: OldDesignator=Q406 NewDesignator=Q405
+Change Component Designator: OldDesignator=Q408 NewDesignator=Q406
+Change Component Description : Designator=VR301 Old Description=Trimmer, Cermet, Rest 10 Kilohms, PCB, 1 Turns, Pwr-Rtg 0.5 W, Tol 10% New Description=Trimmer, Cermet, Rest 10 Kilohms, PCB, 1 Turns, Pwr-Rtg 0.5 W, Tol 10% | Bourns 3362P-1-103LF
+Change Component Description : Designator=VR302 Old Description=Trimmer, Cermet, Rest 10 Kilohms, PCB, 1 Turns, Pwr-Rtg 0.5 W, Tol 10% New Description=Trimmer, Cermet, Rest 10 Kilohms, PCB, 1 Turns, Pwr-Rtg 0.5 W, Tol 10% | Bourns 3362P-1-103LF
+Change Component Description : Designator=VR401 Old Description=Trimmer, Cermet, Rest 10 Kilohms, PCB, 1 Turns, Pwr-Rtg 0.5 W, Tol 10% New Description=Trimmer, Cermet, Rest 10 Kilohms, PCB, 1 Turns, Pwr-Rtg 0.5 W, Tol 10% | Bourns 3362P-1-103LF
+Added Pin To Net: NetName=+3.3 Pin=Q405-G
+Added Pin To Net: NetName=DPS_SDA Pin=Q405-S
+Added Pin To Net: NetName=+3.3 Pin=Q406-G
+Added Pin To Net: NetName=DPS_SCL Pin=Q406-S
+Added Pin To Net: NetName=+3.3 Pin=R419-1
+Added Pin To Net: NetName=DPS_SDA Pin=R419-2
+Added Pin To Net: NetName=+3.3 Pin=R421-1
+Added Pin To Net: NetName=DPS_SCL Pin=R421-2
