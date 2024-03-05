@@ -1,2 +1,2 @@
 # SmartGarden
-Simple home weather station with smart plant watering
+Simple home weather station and plant watering with IoT
