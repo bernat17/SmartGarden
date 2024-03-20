@@ -88,10 +88,18 @@ void CLK_Initialize( void )
     /* Code for fuse settings can be found in "initialization.c" */
 
 
-    /* Wait for PLL to be locked */
-    while(OSCCONbits.LOCK == 0U)
-    {
-        /* Nothing to do */
-    }
+    /* unlock system for clock configuration */
+    SYSKEY = 0x00000000U;
+    SYSKEY = 0xAA996655U;
+    SYSKEY = 0x556699AAU;
+
+    OSCCONbits.FRCDIV = 0x0;
+
+
+
+
+    /* Lock system since done with clock configuration */
+    SYSKEY = 0x33333333U;
+
 
 }

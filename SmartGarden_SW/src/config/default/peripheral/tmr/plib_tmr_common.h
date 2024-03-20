@@ -1,17 +1,17 @@
 /*******************************************************************************
-  Real Time Counter (RTCC) PLIB
+  TMR Peripheral Library Interface Header File
 
-  Company:
+  Company
     Microchip Technology Inc.
 
-  File Name:
-    plib_rtcc.h
+  File Name
+    plib_tmr_common.h
 
-  Summary:
-    RTCC PLIB Header file
+  Summary
+    TMR peripheral library interface.
 
-  Description:
-    This file defines the interface to the RTC peripheral library. This
+  Description
+    This file defines the interface to the TC peripheral library.  This
     library provides access to and control of the associated peripheral
     instance.
 
@@ -42,8 +42,9 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef PLIB_RTCC_H
-#define PLIB_RTCC_H
+#ifndef PLIB_TMR_COMMON_H    // Guards against multiple inclusion
+#define PLIB_TMR_COMMON_H
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -51,18 +52,17 @@
 // *****************************************************************************
 // *****************************************************************************
 
+/*  This section lists the other files that are included in this file.
+*/
 #include <stddef.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include "device.h"
-#include <time.h>
 
 // DOM-IGNORE-BEGIN
-#ifdef __cplusplus // Provide C++ Compatibility
+#ifdef __cplusplus  // Provide C++ Compatibility
 
-    extern "C" {
+extern "C" {
 
 #endif
+
 // DOM-IGNORE-END
 
 // *****************************************************************************
@@ -70,54 +70,51 @@
 // Section: Data Types
 // *****************************************************************************
 // *****************************************************************************
+/*  The following data type definitions are used by the functions in this
+    interface and should be considered part of it.
+*/
 
-typedef enum
+
+// *****************************************************************************
+/* TMR_CALLBACK
+
+  Summary:
+    Use to register a callback with the TMR.
+
+  Description:
+    When a match is asserted, a callback can be activated.
+    Use TMR_CALLBACK as the function pointer to register the callback
+    with the match.
+
+  Remarks:
+    The callback should look like:
+      void callback(handle, context);
+	Make sure the return value and parameters of the callback are correct.
+*/
+
+typedef void (*TMR_CALLBACK)(uint32_t status, uintptr_t context);
+
+// *****************************************************************************
+
+typedef struct
 {
-    RTCC_ALARM_MASK_HALF_SECOND = 0x00,   // Every half-second
-    RTCC_ALARM_MASK_SECOND = 0x01,        // Every second
-    RTCC_ALARM_MASK_10_SECONDS = 0x02,    // Every 10 seconds
-    RTCC_ALARM_MASK_SS = 0x03,            // Every minute
-    RTCC_ALARM_MASK_10_MINUTES = 0x04,    // Every 10 minutes
-    RTCC_ALARM_MASK_HOUR = 0x05,          // Every hour
-    RTCC_ALARM_MASK_HHMISS = 0x06,        // Once a day
-    RTCC_ALARM_MASK_WEEK = 0x07,          // Once a week
-    RTCC_ALARM_MASK_MONTH = 0x08,         // Once a month
-    RTCC_ALARM_MASK_YEAR = 0x09,          // Once a year
-    RTCC_ALARM_MASK_OFF = 0xFF            // Disabled
+    /*TMR callback function happens on Period match*/
+    TMR_CALLBACK callback_fn;
+    /* - Client data (Event Context) that will be passed to callback */
+    uintptr_t context;
 
-} RTCC_ALARM_MASK;
-
-typedef enum
-{
-    RTCC_INT_ALARM = 0x8000
-
-} RTCC_INT_MASK;
-
-typedef void (*RTCC_CALLBACK)( uintptr_t context );
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Interface Routines
-// *****************************************************************************
-// *****************************************************************************
-
-void RTCC_Initialize( void );
-
-bool RTCC_TimeSet( struct tm *Time );
-
-void RTCC_TimeGet(struct tm  *Time );
-
-bool RTCC_AlarmSet( struct tm *alarmTime, RTCC_ALARM_MASK alarmFreq );
-
-void RTCC_CallbackRegister( RTCC_CALLBACK callback, uintptr_t context );
-
+}TMR_TIMER_OBJECT;
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
 
-    }
+}
 
 #endif
 // DOM-IGNORE-END
 
-#endif // PLIB_RTCC_H
+#endif //_PLIB_TMR_COMMON_H
+
+/**
+ End of File
+*/

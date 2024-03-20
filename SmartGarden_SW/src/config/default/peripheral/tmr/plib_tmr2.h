@@ -1,21 +1,23 @@
 /*******************************************************************************
-  ADC Peripheral Library Interface Source File
+  Data Type definition of Timer PLIB
 
-  Company
+  Company:
     Microchip Technology Inc.
 
-  File Name
-    plib_adc.c
+  File Name:
+    plib_tmr2.h
 
-  Summary
-    ADC peripheral library source.
+  Summary:
+    Data Type definition of the Timer Peripheral Interface Plib.
 
-  Description
-    This file implements the ADC peripheral library.
+  Description:
+    This file defines the Data Types for the Timer Plib.
+
+  Remarks:
+    None.
 
 *******************************************************************************/
 
-// DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
 *
@@ -38,78 +40,64 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
-// DOM-IGNORE-END
+
+#ifndef PLIB_TMR2_H
+#define PLIB_TMR2_H
+
+#include <stddef.h>
+#include <stdint.h>
+#include <stdbool.h>
 #include "device.h"
-#include "plib_adc.h"
-#include "interrupts.h"
+#include "plib_tmr_common.h"
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+
+    extern "C" {
+
+#endif
+// DOM-IGNORE-END
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: ADC Implementation
+// Section: Data Types
+// *****************************************************************************
+// *****************************************************************************
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Interface Routines
 // *****************************************************************************
 // *****************************************************************************
 
 
-void ADC_Initialize(void)
-{
-    AD1CON1CLR = _AD1CON1_ON_MASK;
+// *****************************************************************************
+void TMR2_Initialize(void);
 
-    AD1CON3 = 0x1f02;
+void TMR2_Start(void);
+
+void TMR2_Stop(void);
+
+void TMR2_PeriodSet(uint16_t period);
+
+uint16_t TMR2_PeriodGet(void);
+
+uint16_t TMR2_CounterGet(void);
+
+uint32_t TMR2_FrequencyGet(void);
+
+void TMR2_InterruptEnable(void);
+
+void TMR2_InterruptDisable(void);
+
+void TMR2_CallbackRegister( TMR_CALLBACK callback_fn, uintptr_t context );
 
 
-    /* Turn ON ADC */
-    AD1CON1SET = _AD1CON1_ON_MASK;
-}
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
 
-void ADC_Enable(void)
-{
-    AD1CON1SET = _AD1CON1_ON_MASK;
-}
-
-void ADC_Disable(void)
-{
-    AD1CON1CLR = _AD1CON1_ON_MASK;
-}
-
-void ADC_SamplingStart(void)
-{
-    AD1CON1CLR = _AD1CON1_DONE_MASK;
-    AD1CON1SET = _AD1CON1_SAMP_MASK;
-}
-
-void ADC_ConversionStart(void)
-{
-    AD1CON1CLR = _AD1CON1_SAMP_MASK;
-}
-
-void ADC_InputSelect(ADC_MUX muxType, ADC_INPUT_POSITIVE positiveInput, ADC_INPUT_NEGATIVE negativeInput)
-{
-    if (muxType == ADC_MUX_B)
-    {
-        AD1CHSbits.CH0SB = (uint8_t)positiveInput;
-        AD1CHSbits.CH0NB = (uint8_t)negativeInput;
     }
-    else
-    {
-        AD1CHSbits.CH0SA = (uint8_t)positiveInput;
-        AD1CHSbits.CH0NA = (uint8_t)negativeInput;
-    }
-}
+#endif
+// DOM-IGNORE-END
 
-void ADC_InputScanSelect(ADC_INPUTS_SCAN scanInputs)
-{
-    AD1CSSL = (uint32_t)scanInputs;
-}
-
-/*Check if conversion result is available */
-bool ADC_ResultIsReady(void)
-{
-    return (AD1CON1bits.DONE != 0U);
-}
-
-/* Read the conversion result */
-uint32_t ADC_ResultGet(ADC_RESULT_BUFFER bufferNumber)
-{
-    return (*((&ADC1BUF0) + ((uint32_t)bufferNumber << 2)));
-}
-
+#endif /* PLIB_TMR2_H */

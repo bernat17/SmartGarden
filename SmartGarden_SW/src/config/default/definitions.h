@@ -48,12 +48,11 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "peripheral/i2c/master/plib_i2c1_master.h"
+#include "peripheral/power/plib_power.h"
+#include "peripheral/tmr/plib_tmr2.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/evic/plib_evic.h"
-#include "peripheral/adc/plib_adc.h"
-#include "peripheral/rtcc/plib_rtcc.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -70,7 +69,7 @@ extern "C" {
 #define DEVICE_SERIES		 "PIC32MX"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 80000000
+#define CPU_CLOCK_FREQUENCY 8000000
 
 // *****************************************************************************
 // *****************************************************************************

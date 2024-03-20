@@ -57,7 +57,8 @@
 // *****************************************************************************
 // *****************************************************************************
 
-void I2C_1_InterruptHandler( void );
+void EXTERNAL_0_InterruptHandler( void );
+void TIMER_2_InterruptHandler( void );
 
 
 

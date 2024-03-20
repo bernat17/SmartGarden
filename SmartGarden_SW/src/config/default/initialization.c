@@ -62,11 +62,11 @@
 
 
 /*** DEVCFG1 ***/
-#pragma config FNOSC =      FRCPLL
-#pragma config FPBDIV =     DIV_1
+#pragma config FNOSC =      FRC
+#pragma config FPBDIV =     DIV_2
 #pragma config FSOSCEN =    OFF
 #pragma config IESO =       ON
-#pragma config POSCMOD =    OFF
+#pragma config POSCMOD =    HS
 #pragma config OSCIOFNC =   ON
 #pragma config FCKSM =      CSDCMD
 #pragma config WDTPS =      PS1048576
@@ -75,8 +75,8 @@
 
 /*** DEVCFG2 ***/
 #pragma config FPLLIDIV =   DIV_2
-#pragma config FPLLMUL =    MUL_20
-#pragma config FPLLODIV =   DIV_1
+#pragma config FPLLMUL =    MUL_16
+#pragma config FPLLODIV =   DIV_2
 
 /*** DEVCFG3 ***/
 #pragma config USERID =     0xffff
@@ -152,7 +152,7 @@ void SYS_Initialize ( void* data )
     __builtin_mtc0(16, 0,(__builtin_mfc0(16, 0) | 0x3U));
 
     /* Configure Flash Wait States and Prefetch */
-    CHECONbits.PFMWS = 2;
+    CHECONbits.PFMWS = 0;
     CHECONbits.PREFEN = 3;
 
     /* Set the SRAM wait states to One */
@@ -163,12 +163,11 @@ void SYS_Initialize ( void* data )
 
 
 
+
 	GPIO_Initialize();
 
-    I2C1_Initialize();
-    ADC_Initialize();
+    TMR2_Initialize();
 
-    RTCC_Initialize();
 
 
     /* MISRAC 2012 deviation block start */

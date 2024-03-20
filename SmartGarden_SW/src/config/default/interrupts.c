@@ -66,7 +66,8 @@
 // Section: System Interrupt Vector declarations
 // *****************************************************************************
 // *****************************************************************************
-void I2C_1_Handler (void);
+void EXTERNAL_0_Handler (void);
+void TIMER_2_Handler (void);
 
 
 // *****************************************************************************
@@ -74,9 +75,14 @@ void I2C_1_Handler (void);
 // Section: System Interrupt Vector definitions
 // *****************************************************************************
 // *****************************************************************************
-void __ISR(_I2C_1_VECTOR, ipl1SOFT) I2C_1_Handler (void)
+void __ISR(_EXTERNAL_0_VECTOR, ipl1SOFT) EXTERNAL_0_Handler (void)
 {
-    I2C_1_InterruptHandler();
+    EXTERNAL_0_InterruptHandler();
+}
+
+void __ISR(_TIMER_2_VECTOR, ipl1SOFT) TIMER_2_Handler (void)
+{
+    TIMER_2_InterruptHandler();
 }
 
 

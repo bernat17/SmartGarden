@@ -44,6 +44,7 @@
 #include "plib_evic.h"
 
 
+volatile static EXT_INT_PIN_CALLBACK_OBJ extInt0CbObj;
 // *****************************************************************************
 // *****************************************************************************
 // Section: IRQ Implementation
@@ -55,8 +56,11 @@ void EVIC_Initialize( void )
     INTCONSET = _INTCON_MVEC_MASK;
 
     /* Set up priority and subpriority of enabled interrupts */
-    IPC6SET = 0x400U | 0x0U;  /* I2C_1:  Priority 1 / Subpriority 0 */
+    IPC0SET = 0x4000000U | 0x0U;  /* EXTERNAL_0:  Priority 1 / Subpriority 0 */
+    IPC2SET = 0x4U | 0x0U;  /* TIMER_2:  Priority 1 / Subpriority 0 */
 
+    /* Initialize External interrupt 0 callback object */
+    extInt0CbObj.callback = NULL;
 
 }
 
@@ -128,6 +132,57 @@ void EVIC_INT_Restore( bool state )
     {
         /* restore the state of CP0 Status register before the disable occurred */
         (void) __builtin_enable_interrupts();
+    }
+}
+
+void EVIC_ExternalInterruptEnable( EXTERNAL_INT_PIN extIntPin )
+{
+    IEC0SET = (uint32_t)extIntPin;
+}
+void EVIC_ExternalInterruptDisable( EXTERNAL_INT_PIN extIntPin )
+{
+    IEC0CLR = (uint32_t)extIntPin;
+}
+
+bool EVIC_ExternalInterruptCallbackRegister(
+    EXTERNAL_INT_PIN extIntPin,
+    const EXTERNAL_INT_PIN_CALLBACK callback,
+    uintptr_t context
+)
+{
+    bool status = true;
+    switch  (extIntPin)
+        {
+        case EXTERNAL_INT_0:
+            extInt0CbObj.callback = callback;
+            extInt0CbObj.context  = context;
+            break;
+        default:
+            status = false;
+            break;
+        }
+
+    return status;
+}
+
+// *****************************************************************************
+/* Function:
+    void EXTERNAL_0_InterruptHandler(void)
+  Summary:
+    Interrupt Handler for External Interrupt pin 0.
+  Remarks:
+    It is an internal function called from ISR, user should not call it directly.
+*/
+void __attribute__((used)) EXTERNAL_0_InterruptHandler(void)
+{
+    uintptr_t context_var;
+
+    IFS0CLR = _IFS0_INT0IF_MASK;
+
+    if(extInt0CbObj.callback != NULL)
+    {
+        context_var = extInt0CbObj.context;
+        extInt0CbObj.callback (EXTERNAL_INT_0, context_var);
     }
 }
 
