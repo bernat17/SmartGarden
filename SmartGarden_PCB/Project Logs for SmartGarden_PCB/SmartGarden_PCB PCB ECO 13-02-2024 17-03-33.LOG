@@ -1,5 +1,0 @@
-Removed Pin From Net: NetName=GND Pin=R316-2
-Change Component Description : Designator=VR301 Old Description=Trimmer, Cermet, Rest 10 Kilohms, PCB, 1 Turns, Pwr-Rtg 0.5 W, Tol 10% New Description=Trimmer, Cermet, Rest 10 Kilohms, PCB, 1 Turns, Pwr-Rtg 0.5 W, Tol 10% | Bourns 3362P-1-103LF
-Change Component Description : Designator=VR302 Old Description=Trimmer, Cermet, Rest 10 Kilohms, PCB, 1 Turns, Pwr-Rtg 0.5 W, Tol 10% New Description=Trimmer, Cermet, Rest 10 Kilohms, PCB, 1 Turns, Pwr-Rtg 0.5 W, Tol 10% | Bourns 3362P-1-103LF
-Change Component Description : Designator=VR401 Old Description=Trimmer, Cermet, Rest 10 Kilohms, PCB, 1 Turns, Pwr-Rtg 0.5 W, Tol 10% New Description=Trimmer, Cermet, Rest 10 Kilohms, PCB, 1 Turns, Pwr-Rtg 0.5 W, Tol 10% | Bourns 3362P-1-103LF
-Added Pin To Net: NetName=NTC_Vadc Pin=R316-2
