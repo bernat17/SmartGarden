@@ -1,0 +1,6 @@
+Record=TopLevelDocument|FileName=SG_A2 Architecture.SchDoc|SheetNumber=1
+Record=SheetSymbol|SourceDocument=SG_A2 Architecture.SchDoc|Designator=3V3_LDO|SchDesignator=3V3_LDO|FileName=LDO.SchDoc|SheetNumber=3|SymbolType=Normal|RawFileName=LDO.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=SG_A2 Architecture.SchDoc|Designator=5V DCDC|SchDesignator=5V DCDC|FileName=MPQ4323.SchDoc|SheetNumber=2|SymbolType=Normal|RawFileName=MPQ4323.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=SG_A2 Architecture.SchDoc|Designator=U_MCU|SchDesignator=U_MCU|FileName=MCU.SchDoc|SheetNumber=4|SymbolType=Normal|RawFileName=MCU.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=NoMainPathDocument|SourceDocument=SG_A2 Architecture.SchDoc|FileName=Button.SchDoc|SheetNumber=6
+Record=NoMainPathDocument|SourceDocument=SG_A2 Architecture.SchDoc|FileName=NTC.SchDoc|SheetNumber=5
